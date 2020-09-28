@@ -1,0 +1,28 @@
+{
+    "name": "namemc",
+    "version": "0.1.0",
+    "description": "The Unofficial Name MC API Library",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JoshMerlino/namemc.git"
+    },
+    "keywords": [
+        "NameMC",
+        "Minecraft",
+        "Mojang"
+    ],
+    "author": "Josh Merlino",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/JoshMerlino/namemc/issues"
+    },
+    "homepage": "https://github.com/JoshMerlino/namemc#readme",
+    "dependencies": {
+        "cheerio": "^1.0.0-rc.3",
+        "node-fetch": "^2.6.1"
+    }
+}
