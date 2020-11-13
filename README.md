@@ -44,7 +44,7 @@ const user = await lookupUUID("1eb084b8-588e-43e6-bdd3-e05e53682987");
     changedAt: new Date("2015-02-15T12:09:41.000Z")
   }, {
     name: 'picaxjosh',
-    changedAt: null // null because this is the accounts original name
+    changedAt: null
   }]
 }
 ```
