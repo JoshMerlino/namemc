@@ -1,6 +1,6 @@
 {
     "name": "namemc",
-    "version": "0.2.6",
+    "version": "0.2.7",
     "description": "The Unofficial Name MC API Library",
     "main": "index.js",
     "scripts": {
