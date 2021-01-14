@@ -27,8 +27,8 @@ const user = await lookupUUID("1eb084b8-588e-43e6-bdd3-e05e53682987");
     cape: 'https://crafatar.com/capes/1eb084b8-588e-43e6-bdd3-e05e53682987',
     body: 'https://crafatar.com/renders/body/1eb084b8-588e-43e6-bdd3-e05e53682987?overlay',
     head: 'https://crafatar.com/renders/head/1eb084b8-588e-43e6-bdd3-e05e53682987?overlay',
-    face: 'https://crafatar.com/avatars/1eb084b8-588e-43e6-bdd3-e05e53682987?overlay'
-	skins: [
+    face: 'https://crafatar.com/avatars/1eb084b8-588e-43e6-bdd3-e05e53682987?overlay',
+    skins: [
       'https://texture.namemc.com/48/4e/484e5a47d950a850.png',
       'https://texture.namemc.com/57/0f/570f92929465e401.png'
     ]
