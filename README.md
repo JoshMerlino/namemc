@@ -3,21 +3,24 @@
 
 ## Searching by username
 ```javascript
-const { lookupName } = require("namemc");
+import { lookupName } from "namemc"; // require works aswell
+
+// Search users
 const users = await lookupName("tehpicix");
-// Returns an array of users from search results
-// MCUserObject[]
+// Returns Array<Object> - an array of users from search results
+// Results are ordered as they are on Name MC so you may need to filter your response
 ```
 
 ## Searching by UUID
 ```javascript
-const { lookupUUID } = require("namemc");
+import { lookupUUID } from "namemc"; // require works aswell
+
+// Lookup user
 const user = await lookupUUID("1eb084b8-588e-43e6-bdd3-e05e53682987");
-// Returns the user associated with that UUID
-// MCUserObject
+// Returns Object - the user associated with that UUID
 ```
 
-## MCUserObject
+### Example Object response
 ```javascript
 {
   profileId: 'TehPicix.1',
@@ -35,13 +38,13 @@ const user = await lookupUUID("1eb084b8-588e-43e6-bdd3-e05e53682987");
   },
   pastNames: [{
     name: 'TehPicix',
-    changedAt: new Date("2017-04-22T00:20:15.000Z")
+    changedAt: 1492820415000
   }, {
     name: 'TehGoldenPicix48',
-    changedAt: new Date("2015-06-14T00:01:16.000Z")
+    changedAt: 1434240076000
   }, {
     name: 'TehGoldenPicix64',
-    changedAt: new Date("2015-02-15T12:09:41.000Z")
+    changedAt: 1424020181000
   }, {
     name: 'picaxjosh',
     changedAt: null
