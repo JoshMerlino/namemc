@@ -1,5 +1,5 @@
 # Name MC
-## The unofficial Node JS API for looking up Minecraft users on [NameMC](https://namemc.com/)
+The unofficial Node JS API for looking up Minecraft users on [NameMC](https://namemc.com/)
 
 ## Searching by username
 ```javascript
