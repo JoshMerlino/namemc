@@ -1,5 +1,5 @@
 # Name MC
-The unofficial Node JS API for looking up Minecraft users on [Name MC](https://namemc.com/)
+The unofficial Node JS package for looking up Minecraft users on [Name MC](https://namemc.com/)
 
 *⚠ This package is not affiliated with Name MC or Minecraft in any way*
 
@@ -26,7 +26,7 @@ import { lookupUUID } from "namemc"; // require works aswell
 const user = await lookupUUID("1eb084b8-588e-43e6-bdd3-e05e53682987");
 ```
 
-### Response breakdown
+## Response breakdown
 | Key | Description | Type |
 | - | - | - |
 | `profileId` | The ID Name MC assigned to this account. | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) |
@@ -42,7 +42,7 @@ const user = await lookupUUID("1eb084b8-588e-43e6-bdd3-e05e53682987");
 | `pastNames[].name` | The user's name. | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) |
 | `pastNames[].changedAt` | The timestamp the user changed their name to this. `null` if it was the original name of the account. | [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)/[null](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) |
 
-### Example response
+## Example response
 ```javascript
 {
   profileId: 'TehPicix.1',
@@ -74,6 +74,10 @@ const user = await lookupUUID("1eb084b8-588e-43e6-bdd3-e05e53682987");
 }
 ```
 
-### Caveats
+## Caveats
 1. This package is powered by [Web Scraping](https://en.wikipedia.org/wiki/Web_scraping), meaning that if Name MC were to suddenly change the HTML layout on their page it would cause the package to break until I were update it.
 2. Name MC will rate-limit you after a certian amount of requests. In my opinion, they're very generous about this, after spamming an obscene amount of requests, the most I got limited for was 5 seconds. The package will reject the promise if you are being rate limited.
+
+## API
+If you need to use this in a browser and arent using a bundler, you can send API requests to my server to resolve names.
+Endpoints and their info can be found on the [wiki](/wiki).
