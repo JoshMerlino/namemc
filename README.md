@@ -73,3 +73,7 @@ const user = await lookupUUID("1eb084b8-588e-43e6-bdd3-e05e53682987");
   }]
 }
 ```
+
+### Caveats
+1. This package is powered by [Web Scraping](https://en.wikipedia.org/wiki/Web_scraping), meaning that if Name MC were to suddenly change the HTML layout on their page it would cause the package to stop working until I update it without any warning.
+2. Name MC will rate-limit you after a certian amount of requests. In my opinion, they're very generous about this, after spamming an obscene amount of requests, the most I got limited for was 5 seconds. The package will reject the promise if you are being rate limited.
