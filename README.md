@@ -1,14 +1,21 @@
 # Name MC
-The unofficial Node JS API for looking up Minecraft users on [NameMC](https://namemc.com/)
+The unofficial Node JS API for looking up Minecraft users on [Name MC](https://namemc.com/)
+
+*⚠ This package is not affiliated with Name MC or Minecraft in any way*
 
 ## Searching by username
 ```javascript
 import { lookupName } from "namemc"; // require works aswell
 
+const name = "tehpicix";
+
 // Search users
-const users = await lookupName("tehpicix");
-// Returns Array<Object> - object breakdown below
-// Results are ordered as they are on Name MC so you may need to filter your response
+const users = await lookupName(name);
+
+// Results are ordered as they are on Name MC so users[0] may not be the most revelant result,
+// you can filter the response as seen below to find the most revelant result, this gives you the 
+const user = users.filter(({ currentName }) => currentName.toLowerCase() === name.toLowerCase())[0];
+
 ```
 
 ## Searching by UUID
@@ -17,7 +24,6 @@ import { lookupUUID } from "namemc"; // require works aswell
 
 // Lookup user
 const user = await lookupUUID("1eb084b8-588e-43e6-bdd3-e05e53682987");
-// Returns Object - object breakdown below
 ```
 
 ### Response breakdown
