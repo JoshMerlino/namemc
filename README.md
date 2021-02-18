@@ -80,4 +80,4 @@ const user = await lookupUUID("1eb084b8-588e-43e6-bdd3-e05e53682987");
 
 ## API
 If you need to use this in a browser and arent using a bundler, you can send API requests to my server to resolve names.
-Endpoints and their info can be found on the [wiki](/wiki).
+Endpoints and their info can be found on the [wiki](https://github.com/JoshMerlino/namemc/wiki).
