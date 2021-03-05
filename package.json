@@ -1,21 +1,44 @@
 {
-    "name": "ts-package",
-    "version": "1.0.0",
-    "description": "Easily create Typescript node.js packages from this boilerplate",
+    "name": "namemc",
+    "version": "1.3.9",
+    "description": "The unofficial Node JS package for looking up Minecraft users on Name MC",
     "main": "lib/index.js",
     "author": "Josh Merlino",
     "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JoshMerlino/namemc.git"
+    },
+    "keywords": [
+        "minecraft",
+        "web-scraping",
+        "minecraft-api",
+        "mojang",
+        "namemc",
+        "name-mc",
+        "unofficial-node-js",
+        "minecraft-users"
+    ],
+    "bugs": {
+        "url": "https://github.com/JoshMerlino/namemc/issues"
+    },
+    "homepage": "https://github.com/JoshMerlino/namemc#readme",
     "scripts": {
         "watch-ts": "tsc -w",
         "watch-js": "nodemon .",
         "dev": "concurrently \"npm:watch-*\"",
         "start": "tsc; clear && node .",
-		"prepare": "tsc"
+        "prepare": "tsc",
+        "test": "node test.js"
     },
     "devDependencies": {
         "@types/node": "^14.14.31",
         "concurrently": "^6.0.0",
         "nodemon": "^2.0.7",
         "typescript": "^4.2.2"
+    },
+    "dependencies": {
+        "cheerio": "^1.0.0-rc.5",
+        "node-fetch": "^2.6.1"
     }
 }

@@ -1,21 +1,9 @@
-# ts-package
-Easily create Typescript node.js packages from this boilerplate
+# Name MC
+The unofficial Node JS package for looking up Minecraft users on [Name MC](https://namemc.com/)
 
-### Getting Started
-1. Make sure you have node.js `v12+` installed on your system. I'm using node `v14.15.4`.
-2. Install dependencies with `npm install`
+⚠ *This package is not affiliated with Name MC or Minecraft in any way*
 
-### Running in development mode
-```bash
-npm run dev
-```
-
-### Running in production
-```bash
-npm start
-```
-
-### Publishing to npm
-```bash
-npm publish
-```
+Documentation is available for:
+* [TypeScript](https://github.com/JoshMerlino/namemc/blob/master/docs/typescript)
+* [JavaScript](https://github.com/JoshMerlino/namemc/blob/master/docs/javascript) 
+* [Common JS](https://github.com/JoshMerlino/namemc/blob/master/docs/common-js)
