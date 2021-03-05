@@ -1,6 +1,6 @@
 {
     "name": "namemc",
-    "version": "1.3.9",
+    "version": "1.3.10",
     "description": "The unofficial Node JS package for looking up Minecraft users on Name MC",
     "main": "lib/index.js",
     "author": "Josh Merlino",
@@ -9,6 +9,7 @@
         "type": "git",
         "url": "git+https://github.com/JoshMerlino/namemc.git"
     },
+	"types": "./src/types.ts",
     "keywords": [
         "minecraft",
         "web-scraping",
