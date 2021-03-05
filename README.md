@@ -1,3 +1,5 @@
+# ⚠ I am in the process of rewriting this package in TypeScript
+
 # Name MC
 The unofficial Node JS package for looking up Minecraft users on [Name MC](https://namemc.com/)
 
