@@ -30,7 +30,7 @@ export async function lookupUUID(uuid: string) : Promise<NameMCUser> {
 				.values(data.children(".col-lg-4.order-lg-1").children(".card.mb-3").eq(1).children(".card-body").children("a"))
 				.filter(elem => elem.type === "tag")
 				.map(elem => $(elem))
-				.map(elem => elem.attr("href"))
+				.map(elem => elem.attr("href") || "")
 				.map(link => link.split("/")[2])
 				.map(hash => `https://texture.namemc.com/${hash.substr(0,2)}/${hash.substr(2,2)}/${hash}.png`)
 		},
