@@ -1,7 +1,7 @@
 # namemc
 The unofficial Node JS package for looking up Minecraft users on [Name MC](https://namemc.com/).
 
-ℹ ***Name MC has updated their HTML structure. All versions below `v1.4.0+` are now broken***
+ℹ ***Name MC has updated their HTML structure. All versions below `v1.4.0` are now broken***
 
 ⚠ *This package is not affiliated with Name MC or Minecraft in any way*
 
