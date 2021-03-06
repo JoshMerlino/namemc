@@ -58,8 +58,19 @@ export async function lookupUUID(uuid: string) : Promise<NameMCUser> {
 		  	.filter(elem => elem.type === "tag")
 		  	.map(elem => $(elem))
 		  	.map(elem => ({
-				name: elem.children(".col").children("a").text(),
-				changedAt: elem.children(".col-12").children("time").text() ? new Date(elem.children(".col-12").children("time").text()).getTime() : null
+				name: elem
+				  .children(".col")
+				  .children("a")
+				  .text(),
+				changedAt: elem
+				  .children(".col-12")
+				  .children("time")
+				  .text() ?
+					new Date(elem
+					  .children(".col-12")
+					  .children("time")
+					  .text()
+				    ).getTime() : null
 			}) as PastName)
 	} as NameMCUser;
 
