@@ -1,6 +1,6 @@
 # TypeScript Docs
 
-TypeScript Types are in [src/types.ts](https://github.com/JoshMerlino/namemc/blob/master/src/types.ts)
+TypeScript Types are in [src/types.d.ts](https://github.com/JoshMerlino/namemc/blob/master/src/types.d.ts)
 
 ### Looking up user by username
 
