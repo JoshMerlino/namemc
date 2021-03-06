@@ -3,6 +3,8 @@ The unofficial Node JS package for looking up Minecraft users on [Name MC](https
 
 ⚠ *This package is not affiliated with Name MC or Minecraft in any way*
 
+ℹ ***Name MC has updated their HTML structure. All versions below `v1.4.0+` are now broken***
+
 Documentation is available for:
 * [TypeScript](https://github.com/JoshMerlino/namemc/blob/master/docs/typescript.md)
 * [JavaScript](https://github.com/JoshMerlino/namemc/blob/master/docs/javascript.md)

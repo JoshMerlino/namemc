@@ -1,6 +1,9 @@
 import { fetchDom } from "./fetchDom";
 import { NameMCUser } from "./types";
 
+/**
+ *  @param {string} uuid
+ */
 export async function lookupUUID(uuid: string) : Promise<NameMCUser> {
 
 	// If is valid UUID
@@ -11,15 +14,17 @@ export async function lookupUUID(uuid: string) : Promise<NameMCUser> {
 
 	// Start scraping
 	const data = $("body > main > div");
-	const profileId = data.children("div.col-lg-8.order-lg-2").children(".card.mb-3").children(".card-body.py-1").children(".row").eq(2).children(".col-12").text().split("/")[1];
+	const rightData = data.children(".order-md-2").children(".card.mb-3");
+	const leftData = data.children(".order-md-1").children(".card.mb-3");
+	const profileId = rightData.children(".card-body.py-1").children(".row").eq(2).children(".col-12").text().split("/")[1];
 
 	// If player isnt found
 	if(profileId === undefined) throw new Error(`'${uuid}' does not belong to any player.`);
 
 	return {
 		profileId,
-		currentName: data.children("div.col-lg-8.order-lg-2").children(".card.mb-3").eq(1).children(".card-body.py-1").children(".row").first().children(".col").children("a").text(),
-		uuid: data.children("div.col-lg-8.order-lg-2").children(".card.mb-3").children(".card-body.py-1").children(".row").first().children(".col-12").children("samp").text(),
+		currentName: rightData.eq(1).children(".card-body.py-1").children(".row").first().children(".col").children("a").text(),
+		uuid: rightData.children(".card-body.py-1").children(".row").first().children(".col-12").children("samp").text(),
 		imageUrls: {
 			cape: `https://crafatar.com/capes/${uuid}`,
 			body: `https://crafatar.com/renders/body/${uuid}?overlay`,
@@ -27,7 +32,7 @@ export async function lookupUUID(uuid: string) : Promise<NameMCUser> {
 			face: `https://crafatar.com/avatars/${uuid}?overlay`,
 			skins:
 			  Object
-				.values(data.children(".col-lg-4.order-lg-1").children(".card.mb-3").eq(1).children(".card-body").children("a"))
+				.values(leftData.eq(1).children(".card-body").children("a"))
 				.filter(elem => elem.type === "tag")
 				.map(elem => $(elem))
 				.map(elem => elem.attr("href") || "")
@@ -36,7 +41,7 @@ export async function lookupUUID(uuid: string) : Promise<NameMCUser> {
 		},
 		pastNames:
 		  Object
-		  	.values(data.children("div.col-lg-8.order-lg-2").children(".card.mb-3").eq(1).children(".card-body.py-1").children(".row"))
+		  	.values(rightData.eq(1).children(".card-body.py-1").children(".row"))
 		  	.filter(elem => elem.type === "tag")
 		  	.map(elem => $(elem))
 		  	.map(elem => ({

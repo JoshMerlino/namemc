@@ -2,6 +2,9 @@ import { NameMCUser } from "./types";
 import { lookupUUID as fetch } from "./lookupUUID";
 import { fetchDom } from "./fetchDom";
 
+/**
+ *  @param {string} player
+ */
 export async function lookupName(name: string) : Promise<Array<NameMCUser>> {
 
 	// Make sure the username is a valid MC username
