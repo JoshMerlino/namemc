@@ -1,5 +1,5 @@
 import { fetchDom } from "./fetchDom";
-import { NameMCUser } from "./types";
+import { NameMCUser, PastName } from "./types";
 
 /**
  *  @param {string} uuid
@@ -23,8 +23,21 @@ export async function lookupUUID(uuid: string) : Promise<NameMCUser> {
 
 	return {
 		profileId,
-		currentName: rightData.eq(1).children(".card-body.py-1").children(".row").first().children(".col").children("a").text(),
-		uuid: rightData.children(".card-body.py-1").children(".row").first().children(".col-12").children("samp").text(),
+		currentName: rightData
+		  .eq(1)
+		  .children(".card-body.py-1")
+		  .children(".row")
+		  .first()
+		  .children(".col")
+		  .children("a")
+		  .text(),
+		uuid: rightData
+		  .children(".card-body.py-1")
+		  .children(".row")
+		  .first()
+		  .children(".col-12")
+		  .children("samp")
+		  .text(),
 		imageUrls: {
 			cape: `https://crafatar.com/capes/${uuid}`,
 			body: `https://crafatar.com/renders/body/${uuid}?overlay`,
@@ -47,7 +60,7 @@ export async function lookupUUID(uuid: string) : Promise<NameMCUser> {
 		  	.map(elem => ({
 				name: elem.children(".col").children("a").text(),
 				changedAt: elem.children(".col-12").children("time").text() ? new Date(elem.children(".col-12").children("time").text()).getTime() : null
-			}))
+			}) as PastName)
 	} as NameMCUser;
 
 }
