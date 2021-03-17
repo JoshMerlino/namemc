@@ -1,4 +1,6 @@
 # namemc
+[![Node.js CI](https://github.com/JoshMerlino/namemc/actions/workflows/node.js.yml/badge.svg)](https://github.com/JoshMerlino/namemc/actions/workflows/node.js.yml)
+
 The unofficial Node JS package for looking up Minecraft users on [Name MC](https://namemc.com/).
 
 ℹ ***Name MC has updated their HTML structure. All versions below `v1.4.0` are now broken***
@@ -18,3 +20,4 @@ The unofficial Node JS package for looking up Minecraft users on [Name MC](https
 ## API
 If you need to use this in a browser and arent using a bundler, you can send API requests to my server to resolve names.
 Endpoints and their info can be found on the [wiki](https://github.com/JoshMerlino/namemc/wiki).
+
