@@ -1,6 +1,14 @@
+.git/
+.github/
+docs/
 node_modules/
 src/
-.env
-docs/
+tests/
+
+.eslint.json
+.gitignore
+LICENSE
+tsconfig.json
+
 *.js.map
 !*.d.ts
