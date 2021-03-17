@@ -4,7 +4,7 @@
     "description": "The unofficial Node JS package for looking up Minecraft users on Name MC",
     "main": "lib/index.js",
     "author": "Josh Merlino",
-    "license": "ISC",
+    "license": "MIT",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/JoshMerlino/namemc.git"
