@@ -8,7 +8,7 @@ export enum SkinModel { "classic", "slim" }
 export interface PastSkin {
     url: string,
     model: SkinModel
-    changedAt: null | number
+    changedAt: number
 }
 
 export interface NameMCUser {
