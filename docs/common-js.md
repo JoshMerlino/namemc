@@ -14,7 +14,6 @@ lookupName("3E7").then(function(users) {
 	});
 
 });
-
 ```
 
 ### Looking up user by UUID
@@ -29,8 +28,4 @@ lookupUUID("1eb084b8-588e-43e6-bdd3-e05e53682987").then(function(user) {
 	console.log(user);
 
 });
-
 ```
-
-### Object schema
-Read about the object format/schema [here](https://github.com/JoshMerlino/namemc/blob/master/docs/user.md).

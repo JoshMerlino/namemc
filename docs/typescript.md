@@ -1,6 +1,6 @@
 # TypeScript Docs
 
-TypeScript Types are in [src/types.d.ts](https://github.com/JoshMerlino/namemc/blob/master/src/types.d.ts)
+TypeScript types are in [src/types.d.ts](https://github.com/JoshMerlino/namemc/blob/master/src/types.d.ts)
 
 ### Looking up user by username
 
@@ -19,7 +19,6 @@ import { lookupName, NameMCUser } from "namemc";
 	});
 
 }())
-
 ```
 
 ### Looking up user by UUID
@@ -37,8 +36,4 @@ import { lookupUUID, NameMCUser } from "namemc";
 	console.log(user);
 
 }())
-
 ```
-
-### Object schema
-Read about the object format/schema [here](https://github.com/JoshMerlino/namemc/blob/master/docs/user.md).

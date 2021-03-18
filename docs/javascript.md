@@ -17,7 +17,6 @@ import { lookupName } from "namemc";
 	});
 
 }())
-
 ```
 
 ### Looking up user by UUID
@@ -35,8 +34,4 @@ import { lookupUUID } from "namemc";
 	console.log(user);
 
 }())
-
 ```
-
-### Object schema
-Read about the object format/schema [here](https://github.com/JoshMerlino/namemc/blob/master/docs/user.md).
