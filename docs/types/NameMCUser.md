@@ -1,6 +1,4 @@
-### NameMCUser
-
-
+### Interface [NameMCUser](https://github.com/JoshMerlino/namemc/blob/master/src/types.d.ts#L14)
 
 | Key | Description | Type |
 | - | - | - |
