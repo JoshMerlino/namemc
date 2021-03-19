@@ -9,6 +9,6 @@ export type NameMCUser = __NameMCUser;
 export type PastName = __PastName;
 
 export default {
-	lookupUUID: __lookupUUID,
-	lookupName: __lookupName,
+    lookupUUID: __lookupUUID,
+    lookupName: __lookupName,
 }
