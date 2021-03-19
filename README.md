@@ -1,5 +1,6 @@
 # namemc
 [![Node.js CI](https://github.com/JoshMerlino/namemc/actions/workflows/node.js.yml/badge.svg)](https://github.com/JoshMerlino/namemc/actions/workflows/node.js.yml)
+![](https://img.shields.io/librariesio/github/JoshMerlino/namemc)
 
 The unofficial Node JS package for looking up Minecraft users on [Name MC](https://namemc.com/).
 
