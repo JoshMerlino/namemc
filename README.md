@@ -3,20 +3,16 @@
 
 The unofficial Node JS package for looking up Minecraft users on [Name MC](https://namemc.com/).
 
-ℹ ***Name MC has updated their HTML structure. All versions below `v1.4.0` are now broken***
+ℹ *Name MC has updated their HTML structure. All versions below `v1.4.0` are now broken*
 
 ⚠ *This package is not affiliated with Name MC or Minecraft in any way*
+
+---
 
 ### Documentation:
 * [TypeScript](https://github.com/JoshMerlino/namemc/blob/master/docs/typescript.md)
 * [JavaScript](https://github.com/JoshMerlino/namemc/blob/master/docs/javascript.md)
 * [Common JS](https://github.com/JoshMerlino/namemc/blob/master/docs/common-js.md)
-
-### Types
-| Export name | Description | Returns |
-| - | - | - |
-| lookupName | Look up users by their Minecraft username or names they may have had in the past. | [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)<[NameMCUser](https://github.com/JoshMerlino/namemc/blob/master/docs/types/NameMCUser.md)> |
-| lookupUUID | Look up a user by their Mojang UUID. | [NameMCUser](https://github.com/JoshMerlino/namemc/blob/master/docs/types/NameMCUser.md) |
 
 ## Caveats
 1. This package is powered by [Web Scraping](https://en.wikipedia.org/wiki/Web_scraping), meaning that if Name MC were to suddenly change the HTML layout on their page it would cause the package to break until I were update it.
