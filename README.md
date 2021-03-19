@@ -1,6 +1,12 @@
 # namemc
 [![Node.js CI](https://github.com/JoshMerlino/namemc/actions/workflows/node.js.yml/badge.svg)](https://github.com/JoshMerlino/namemc/actions/workflows/node.js.yml)
-![](https://img.shields.io/librariesio/github/JoshMerlino/namemc)
+[![njsscan sarif](https://github.com/JoshMerlino/namemc/actions/workflows/njsscan-analysis.yml/badge.svg)](https://github.com/JoshMerlino/namemc/actions/workflows/njsscan-analysis.yml)
+
+![](https://img.shields.io/npm/dt/namemc)
+![](https://img.shields.io/github/issues/JoshMerlino/namemc)
+![](https://img.shields.io/github/issues-closed/JoshMerlino/namemc)
+![](https://img.shields.io/github/issues-pr/JoshMerlino/namemc)
+![](https://img.shields.io/github/issues-pr-closed/JoshMerlino/namemc)
 
 The unofficial Node JS package for looking up Minecraft users on [Name MC](https://namemc.com/).
 
