@@ -13,7 +13,7 @@ export default function scraper($: JQueryDOM) {
     const profileId: string = rightData.children(".card-body.py-1").children(".row").eq(2).children(".col-12").text().split("/")[1];
 
     // The accounts current Minecraft username.
-    const currentName: string = rightData.eq(1).children(".card-body.py-1").children(".row").first().children(".col").children("a").text();
+    const currentName: string = rightData.eq(1).children(".card-body.py-1").children(".row").first().children(".col").children(".row.no-gutters").children(".col").children("a").text();
 
     // The accounts static UUID.
     const uuid: string = rightData.children(".card-body.py-1").children(".row").first().children(".col-12").children("samp").text();
@@ -60,9 +60,9 @@ export default function scraper($: JQueryDOM) {
 
     // An array of objects containing the user's previous names and when they were changed.
     const pastNames = Object.values(rightData.eq(1).children(".card-body.py-1").children(".row")).filter((elem: any) => elem.type === "tag").map(elem => $(elem)).map(elem => (new class PastName {
-        name = elem.children(".col").children("a").text();
+        name = elem.children(".col").children(".row.no-gutters").children(".col").children("a").text();
         changedAt = elem.children(".col-12").children("time").text() ? new Date(elem.children(".col-12").children("time").text()).getTime() : null;
-    } as PastName));
+    } as PastName)).reverse();
 
     // Return player as interface
     return new class NameMCUser {
