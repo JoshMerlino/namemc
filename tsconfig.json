@@ -4,7 +4,7 @@
         "module": "commonjs",
         "target": "es5",
 		"baseUrl": "src",
-        "types": ["node"],
+        "types": ["node", "cheerio"],
 		"outDir": "lib",
         "sourceMap": true,
         "strict": true,

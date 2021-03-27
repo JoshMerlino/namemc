@@ -1,4 +1,4 @@
-### Interface [PastName](https://github.com/JoshMerlino/namemc/blob/master/src/types.d.ts#L1)
+### Interface [PastName](https://github.com/JoshMerlino/namemc/blob/master/src/interface.ts#L1)
 
 | Key | Description | Type |
 | - | - | - |
