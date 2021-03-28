@@ -5,10 +5,12 @@ export default function scraper($: cheerio.Root) : NameMCUser {
 	// Start parsing HTML
 	const data = $("body > main > div");
 
+	// Parse the right side of the data rows
 	const rightData = data
 		.children(".order-md-2")
 		.children(".card.mb-3");
 
+	// Parse the left side of the data rows
 	const leftData = data
 		.children(".order-md-1")
 		.children(".card.mb-3");
