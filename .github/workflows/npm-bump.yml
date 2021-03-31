@@ -26,7 +26,7 @@ jobs:
         id: version-bump
         uses: "phips28/gh-action-bump-version@master"
         with:
-          tag-prefix: 'v'
+          tag-prefix: ''
           commit-message: 'Bump: package.json version to {{version}}'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
