@@ -5,13 +5,13 @@ import { fetchDom } from "./fetchDom";
 /**
  *  @param {string} player
  */
-export async function lookupName(name: string): Promise<Array<NameMCUser>> {
+export async function lookupName(player: string): Promise<Array<NameMCUser>> {
 
 	// Make sure the username is a valid MC username
-	if (!name.match(/\w{3,16}/g)) throw new Error(`'${name}' is not a valid username.`);
+	if (!player.match(/\w{3,16}/g)) throw new Error(`'${player}' is not a valid username.`);
 
 	// Fetch the DOM
-	const $ = await fetchDom(`search?q=${name}`);
+	const $ = await fetchDom(`search?q=${player}`);
 
 	// Get results
 	const results = $("body > main > div.row > div.col-lg-7").children(".card.mb-3");
