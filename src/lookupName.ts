@@ -10,8 +10,6 @@ export async function lookupName(player: string): Promise<Array<NameMCUser>> {
 	// Make sure the username is a valid MC username
 	if (!player.match(/\w{3,16}/g)) throw new Error(`'${player}' is not a valid username.`);
 
-	console.log(player);
-
 	// Fetch the DOM
 	const $ = await fetchDOM(`search?q=${player}`);
 
@@ -39,5 +37,6 @@ export async function lookupName(player: string): Promise<Array<NameMCUser>> {
 		});
 
 	}) as Promise<Array<NameMCUser>>;
+	// */
 
 }
