@@ -1,6 +1,6 @@
 import { NameMCUser } from "./interface";
 import { lookupUUID as fetch } from "./lookupUUID";
-import { fetchDom } from "./fetchDom";
+import { fetchDOM } from "./fetchDOM";
 
 /**
  *  @param {string} player
@@ -10,8 +10,10 @@ export async function lookupName(player: string): Promise<Array<NameMCUser>> {
 	// Make sure the username is a valid MC username
 	if (!player.match(/\w{3,16}/g)) throw new Error(`'${player}' is not a valid username.`);
 
+	console.log(player);
+
 	// Fetch the DOM
-	const $ = await fetchDom(`search?q=${player}`);
+	const $ = await fetchDOM(`search?q=${player}`);
 
 	// Get results
 	const results = $("body > main > div.row > div.col-lg-7").children(".card.mb-3");

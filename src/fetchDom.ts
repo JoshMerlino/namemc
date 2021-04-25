@@ -1,7 +1,7 @@
 import fetch, { Response } from "node-fetch";
 import cheerio from "cheerio";
 
-export async function fetchDom(path: string) : Promise<cheerio.Root> {
+export async function fetchDOM(path: string) : Promise<cheerio.Root> {
 
 	// Fetch page
 	const response: Response = await fetch(`https://namemc.com/${path}`);

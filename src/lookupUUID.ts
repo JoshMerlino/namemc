@@ -1,5 +1,5 @@
 import scraper from "./scraper";
-import { fetchDom } from "./fetchDom";
+import { fetchDOM } from "./fetchDOM";
 import { NameMCUser } from "./interface";
 
 /**
@@ -11,7 +11,7 @@ export async function lookupUUID(uuid: string): Promise<NameMCUser> {
 	if (!uuid.match(/^[0-9a-f]{8}(-)?[0-9a-f]{4}(-)?[0-9a-f]{4}(-)?[0-9a-f]{4}(-)?[0-9a-f]{12}/g)) throw new Error(`'${uuid}' is not a valid uuid.`);
 
 	// Fetch the DOM
-	const $ = await fetchDom(`profile/${uuid}`);
+	const $ = await fetchDOM(`profile/${uuid}`);
 
 	// Start scraping
 	const profileId = $("body > main > div").children(".order-md-2").children(".card.mb-3").children(".card-body.py-1").children(".row").eq(2).children(".col-12").text().split("/")[1];
