@@ -6,40 +6,43 @@ import { fetchDOM } from "./fetchDom";
  *  @param {string} player
  */
 export async function lookupName(player: string): Promise<Array<NameMCUser>> {
-  // Make sure the username is a valid MC username
-  if (!player.match(/\w{3,16}/g))
-    throw new Error(`'${player}' is not a valid username.`);
 
-  // Fetch the DOM
-  const $ = await fetchDOM(`search?q=${player}`);
+	// Make sure the username is a valid MC username
+	if (!player.match(/\w{3,16}/g))
+		throw new Error(`'${player}' is not a valid username.`);
 
-  // Get results
-  const results = $("body > main > div.row > div.col-lg-7").children(
-    ".card.mb-3"
-  );
+	// Fetch the DOM
+	const $ = await fetchDOM(`search?q=${player}`);
 
-  // Get final listing
-  const final: NameMCUser[] = [];
+	// Get results
+	const results = $("body > main > div.row > div.col-lg-7").children(".card.mb-3");
 
-  return new Promise((resolve) => {
-    // Iterate through each result
-    results.each(async function (this: cheerio.Root) {
-      // Get uuid of result
-      const data = $(this);
-      const uuid = data
-        .children(".card-header.py-0")
-        .children("a")
-        .children(".row")
-        .children(".col")
-        .children("samp")
-        .text();
+	// Get final listing
+	const final: NameMCUser[] = [];
 
-      // Push full lookup to results
-      final.push(await fetch(uuid));
+	return new Promise(resolve => {
 
-      // Resolve when al have been finished
-      if (results.length === final.length) return resolve(final);
-    });
-  }) as Promise<Array<NameMCUser>>;
-  // */
+		// Iterate through each result
+		results.each(async function(this: cheerio.Root): Promise<void> {
+			// Get uuid of result
+			const data = $(this);
+			const uuid = data
+				.children(".card-header.py-0")
+				.children("a")
+				.children(".row")
+				.children(".col")
+				.children("samp")
+				.text();
+
+			// Push full lookup to results
+			final.push(await fetch(uuid));
+
+			// Resolve when al have been finished
+			if (results.length === final.length) return resolve(final);
+
+
+		});
+	}) as Promise<Array<NameMCUser>>;
+
+
 }
