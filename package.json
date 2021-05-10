@@ -1,6 +1,6 @@
 {
     "name": "namemc",
-    "version": "1.8.4",
+    "version": "1.8.5",
     "description": "The unofficial Node JS package for looking up Minecraft users on Name MC",
     "main": "lib/index.js",
     "author": "Josh Merlino",
