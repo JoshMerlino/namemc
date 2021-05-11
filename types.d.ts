@@ -1,5 +1,3 @@
-declare module "namemc";
-
 declare interface PastName {
 	name: string;
 	changedAt: null | number;

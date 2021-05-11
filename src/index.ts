@@ -1,3 +1,5 @@
+declare module "namemc";
+
 // CommonJS exports
 import { lookupName } from "./lookupName";
 import { lookupUUID } from "./lookupUUID";
