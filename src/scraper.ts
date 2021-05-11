@@ -1,4 +1,4 @@
-import { NameMCUser, SkinModel, PastSkin, PastName } from "./interface";
+import { NameMCUser, PastName, PastSkin, SkinModel } from "../types";
 
 export default function scraper($: cheerio.Root): NameMCUser {
 

@@ -1,17 +1,19 @@
-export interface PastName {
+declare module "namemc";
+
+declare interface PastName {
 	name: string;
 	changedAt: null | number;
 }
 
-export type SkinModel = "classic" | "slim";
+declare type SkinModel = "classic" | "slim";
 
-export interface PastSkin {
+declare interface PastSkin {
 	url: string;
 	model: SkinModel;
 	changedAt: number;
 }
 
-export interface NameMCUser {
+declare interface NameMCUser {
 	profileId: string;
 	currentName: string;
 	uuid: string;

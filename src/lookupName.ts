@@ -1,6 +1,6 @@
-import { NameMCUser } from "./interface";
-import { lookupUUID as fetch } from "./lookupUUID";
+import { NameMCUser } from "../types";
 import { fetchDOM } from "./fetchDom";
+import { lookupUUID as fetch } from "./lookupUUID";
 
 /**
  *  @param {string} player

@@ -1,5 +1,5 @@
-import fetch, { Response } from "node-fetch";
 import cheerio from "cheerio";
+import fetch, { Response } from "node-fetch";
 
 export async function fetchDOM(path: string): Promise<cheerio.Root> {
 

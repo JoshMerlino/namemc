@@ -1,6 +1,6 @@
-import scraper from "./scraper";
+import { NameMCUser } from "../types";
 import { fetchDOM } from "./fetchDom";
-import { NameMCUser } from "./interface";
+import scraper from "./scraper";
 
 /**
  *  @param {string} uuid Get a Name MC Player by their Mojang UUID

@@ -1,9 +1,10 @@
 // CommonJS exports
-import { lookupUUID } from "./lookupUUID";
 import { lookupName } from "./lookupName";
+import { lookupUUID } from "./lookupUUID";
 export default { lookupUUID, lookupName };
 
 // Typescript && ESModule exports
-export { lookupUUID } from "./lookupUUID";
+export { NameMCUser, PastName, PastSkin, SkinModel } from "../types";
 export { lookupName } from "./lookupName";
-export { NameMCUser, PastName, PastSkin, SkinModel } from "./interface";
+export { lookupUUID } from "./lookupUUID";
+

@@ -9,7 +9,7 @@
         "type": "git",
         "url": "git+https://github.com/JoshMerlino/namemc.git"
     },
-    "types": "./src/interface.ts",
+    "types": "./types.d.ts",
     "keywords": [
         "minecraft",
         "web-scraping",
