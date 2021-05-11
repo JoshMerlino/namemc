@@ -1,4 +1,5 @@
-import { NameMCUser } from "../types";
+import cheerio from "cheerio";
+import { NameMCUser } from "namemc";
 import { fetchDOM } from "./fetchDom";
 import { lookupUUID as fetch } from "./lookupUUID";
 

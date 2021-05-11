@@ -1,4 +1,4 @@
-import { NameMCUser } from "../types";
+import { NameMCUser } from "namemc";
 import { fetchDOM } from "./fetchDom";
 import scraper from "./scraper";
 

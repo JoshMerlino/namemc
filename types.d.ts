@@ -1,29 +1,37 @@
-declare interface PastName {
-	name: string;
-	changedAt: null | number;
-}
+declare module "namemc" {
 
-declare type SkinModel = "classic" | "slim";
+	export interface PastName {
+		name: string;
+		changedAt: null | number;
+	}
 
-declare interface PastSkin {
-	url: string;
-	model: SkinModel;
-	changedAt: number;
-}
+	export type SkinModel = "classic" | "slim";
 
-declare interface NameMCUser {
-	profileId: string;
-	currentName: string;
-	uuid: string;
-	skins: {
-		currentSkin: string;
-		renders: {
-			cape: string;
-			body: string;
-			head: string;
-			face: string;
+	export interface PastSkin {
+		url: string;
+		model: SkinModel;
+		changedAt: number;
+	}
+
+	export interface NameMCUser {
+		profileId: string;
+		currentName: string;
+		uuid: string;
+		skins: {
+			currentSkin: string;
+			renders: {
+				cape: string;
+				body: string;
+				head: string;
+				face: string;
+			};
+			pastSkins: Array<PastSkin>;
 		};
-		pastSkins: Array<PastSkin>;
-	};
-	pastNames: Array<PastName>;
+		pastNames: Array<PastName>;
+	}
+
+	export async function lookupUUID(uuid: string): Promise<NameMCUser>
+
+	export async function lookupName(uuid: string): Promise<NameMCUser[]>
+
 }
