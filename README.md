@@ -4,9 +4,7 @@
 
 ![](https://img.shields.io/npm/dt/namemc)
 ![](https://img.shields.io/github/issues/JoshMerlino/namemc)
-![](https://img.shields.io/github/issues-closed/JoshMerlino/namemc)
 ![](https://img.shields.io/github/issues-pr/JoshMerlino/namemc)
-![](https://img.shields.io/github/issues-pr-closed/JoshMerlino/namemc)
 
 The unofficial Node JS package for looking up Minecraft users on [Name MC](https://namemc.com/).
 
