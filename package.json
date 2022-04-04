@@ -39,7 +39,7 @@
         "@types/node-fetch": "^2.5.8",
         "@typescript-eslint/eslint-plugin": "^4.22.1",
         "@typescript-eslint/parser": "^4.22.1",
-        "concurrently": "^6.0.0",
+        "concurrently": "^7.1.0",
         "eslint": "^7.26.0",
         "jest": "^27.0.1",
         "nodemon": "^2.0.7",
